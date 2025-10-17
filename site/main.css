@@ -1,0 +1,25 @@
+* {
+	font-family: sans-serif;
+}
+
+figcaption {
+	font-size: small;
+}
+
+aside {
+	border: 1px solid gray;
+	border-radius: 1em;
+	padding: 0.5em;
+	width: min(25%, 600px);
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin-top: 0.5em;
+	}
+}
+
+body {
+	padding: 0 max(10%, 10em);
+}
