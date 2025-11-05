@@ -1,3 +1,6 @@
+@import url('./theme.css');
+@import url('./styles.css');
+
 * {
 	font-family: sans-serif;
 }
@@ -6,10 +9,19 @@ figcaption {
 	font-size: small;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--fg-accent);
+}
+
 aside {
-	border: 1px solid gray;
+	border: 1px solid var(--border-accent);
 	border-radius: 1em;
-	padding: 0.5em;
+	padding: 0.5em 1em;
 	width: min(25%, 600px);
 
 	h1,
@@ -22,4 +34,28 @@ aside {
 
 body {
 	padding: 0 max(10%, 10em);
+}
+
+#theme {
+	position: fixed;
+	top: 1em;
+	right: 1em;
+}
+
+:root:has(#theme option[value='forest']:checked) {
+	--hue: 150deg;
+	--fg-light: 70%;
+	--bg-light: 20%;
+}
+
+:root:has(#theme option[value='dark']:checked) {
+	--hue: 240deg;
+	--fg-light: 73%;
+	--bg-light: 13.3%;
+}
+
+:root:has(#theme option[value='light']:checked) {
+	--fg-light: 10%;
+	--bg-light: 70%;
+	--light-step: -6%;
 }
