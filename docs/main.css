@@ -59,3 +59,14 @@ body {
 	--bg-light: 70%;
 	--light-step: -6%;
 }
+
+/* Fix bunched up lines on Chromium */
+@supports (text-size-adjust: 100%) and (-webkit-appearance: none) {
+	ul {
+		line-height: 1.5;
+	}
+
+	aside {
+		line-height: 1.25;
+	}
+}
